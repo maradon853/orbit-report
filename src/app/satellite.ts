@@ -13,11 +13,10 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.operational = operational;
     this.changeColor = this.changeColor;
 }
-shouldShowWarning(): boolean {
-    if (this.type = "Space Debris"){
-        
-    }
-    return true
+shouldShowWarning() {
+    if (this.type.toLowerCase() === 'space debris'){
+        return true
+    };
     }
 }
 
