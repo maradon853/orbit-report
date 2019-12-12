@@ -6,6 +6,7 @@ import { Satellite } from './satellite';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'orbit-report';
   //sourceList = [];
@@ -28,7 +29,8 @@ export class AppComponent {
          this.displayList = this.sourceList.slice(0);
       }.bind(this));
    }.bind(this));
-}
+  }
+
    search(searchTerm: string): void {
       let matchingSatellites: Satellite[] = [];
       searchTerm = searchTerm.toLowerCase();
@@ -42,6 +44,7 @@ export class AppComponent {
       // this will cause Angular to re-make the table, but now only containing matches
       this.displayList = matchingSatellites;
    }
+   
 }
 
 
